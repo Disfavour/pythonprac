@@ -1,0 +1,2 @@
+python3 task_2.py < data/input_1.txt > data/output_4.txt
+diff -u data/output_1.txt data/output_4.txt

@@ -1,0 +1,2 @@
+python3 gen.py > data/file.txt
+python3 finder.py < data/file.txt
