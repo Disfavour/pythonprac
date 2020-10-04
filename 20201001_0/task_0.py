@@ -1,7 +1,11 @@
-def Pareto(*pairs):
-    return tuple(a for a in pairs if all(not domination(a, b) for b in pairs))
+def not_domination(a, b):
+    return a[0] <= b[0] and a[1] <= b[1] and (a[0] < b[0] or a[1] < b[1])
 
-def domination(a, b):
-    return b[0] >= a[0] and b[1] >= a[1] and (b[0] > a[0] or b[1] > a[1])
-print(Pareto(eval(input())))
+
+def Pareto(*pairs):
+    return tuple([a for a in pairs if all([(not not_domination(a, b)) for b in pairs])])
+
+
+a = eval(input())
+print(Pareto(*[i for i in a]))
 
