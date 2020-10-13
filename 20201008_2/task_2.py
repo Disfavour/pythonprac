@@ -1,16 +1,18 @@
 from fractions import Fraction as F
-from decimal import Decimal as D
 
 
-a = input().split(", ")
-print(a)
-s = a[0]
-w = a[1]
-A = a[2:2 + int(a[2]) + 2]
-B = a[2 + int(a[2]) + 2:]
-print(s, w, A, B)
-s = F(s)
-w = F(w)
-A = list(enumerate(A))
-B = reversed(list(enumerate(B)))
-print(A, B)
+def suub(s, w, A, B):
+    r1 = sum(c * s ** (len(A) - i - 1) for i, c in enumerate(A))
+    r2 = sum(c * s ** (len(A) - i - 1) for i, c in enumerate(B))
+    return r2 * w == r1
+
+
+ALL = input().split(", ")
+
+s, w, p1 = F(ALL[0]), F(ALL[1]), int(ALL[2])
+p2 = int(ALL[4 + p1])
+
+A = [F(c) for c in ALL[3:4 + p1]]
+B = [F(c) for c in ALL[5 + p1:]]
+
+print(suub(s, w, A, B))
