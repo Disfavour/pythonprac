@@ -12,5 +12,5 @@ def fib(m, n):
         i += 1
 
 
-print(list(fib(*eval(input()))))
+print(*list(fib(*eval(input()))), sep=", ")
 

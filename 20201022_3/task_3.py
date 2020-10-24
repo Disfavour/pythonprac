@@ -1,5 +1,11 @@
 from itertools import *
 
 
-print(list(filter(lambda x: "".join(x).count("TOR") == 2, product('ORT', repeat=int(input())))))
+def f(i):
+    for item in product('ORT', repeat=i):
+        if "".join(item).count("TOR") == 2:
+            yield "".join(item)
+
+
+print(*list(f(int(input()))), sep=", ")
 

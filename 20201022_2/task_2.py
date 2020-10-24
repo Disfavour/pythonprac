@@ -1,10 +1,14 @@
 from itertools import islice, filterfalse, tee
+
+
 def even(seq):
     return filterfalse(lambda x: x%2, seq)
+
 
 """def slide(a):
     for i in range(len(a) - 2):
         yield from even(a[i: i + 3])"""
+
 
 def slide(seq):
     seq = iter(seq)
@@ -17,5 +21,5 @@ def slide(seq):
         next(seq)
 
 
-print(list(slide(list(eval(input())))))
+print(*list(slide(list(eval(input())))), sep=", ")
 
