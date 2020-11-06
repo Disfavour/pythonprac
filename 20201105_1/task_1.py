@@ -1,5 +1,5 @@
 from re import *
 
 
-print(bool(search(r"[+-]?(\d+(\.\d+)?|\d*\.\d+)([eE][+-]?/d+)?$", input())))
+print(search(r"[+-]?(\d+(\.\d+)?|\d*\.\d+)([eE][+-]?\d+)?", input()))
 
