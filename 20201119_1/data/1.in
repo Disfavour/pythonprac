@@ -1,0 +1,6 @@
+l = fun2(10, 20, 30)
+m = fun2()
+b = fun1("qwe", "rty")
+a = fun1(1, 2) + fun1(10, 200)
+print(a+len(b)+m+l)
+

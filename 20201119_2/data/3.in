@@ -1,0 +1,6 @@
+A = C()
+B = C()
+A.num = "qwerty" + "123"
+B.num = range(255)
+print(A.num * 2, B.num)
+
