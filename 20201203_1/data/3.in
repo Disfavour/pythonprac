@@ -1,0 +1,16 @@
+class C(metaclass=dump):
+    def __init__(self, val):
+        self.val = val
+
+    def add(self, other, another=None):
+        return self.val + other + (another or self.val)
+
+class D(metaclass=dump):
+    val = "Hello "
+    def dadd(self, other):
+        return (self.val + other + "\n") * 3
+
+d = D()
+c = C(1)
+print(d.dadd(other="World!"))
+print(c.add(other=9, another=10))

@@ -1,0 +1,8 @@
+__init__: (1,), {}
+dadd: (), {'other': 'World!'}
+Hello World!
+Hello World!
+Hello World!
+
+add: (), {'other': 9, 'another': 10}
+20
