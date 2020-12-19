@@ -1,3 +1,9 @@
+@deccount
+def fun1(a, b):
+    return a*2+b
+@deccount
+def fun2(x=1, y=2, z=3):
+    return x+y+z
 fun2()
 fun2()
 fun2()
@@ -17,4 +23,3 @@ fun1(4,3)
 fun2()
 fun1(1,2)
 fun2()
-

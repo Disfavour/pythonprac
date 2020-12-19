@@ -7,7 +7,5 @@ class nestr(UserString):
         return self.__class__(self.data)
 
 
-a = nestr("aabbcdefg")
-b = nestr("abbbklopafdsdg")
 print(eval(input()))
 

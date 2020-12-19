@@ -1,3 +1,5 @@
+import sys
+
 class Num:
     def __get__(self, obj, cls):
         try:
@@ -17,15 +19,4 @@ class Num:
     def __delete__(self, obj):
         obj._value = None
 
-class C:
-    num = Num()
-
-s = []
-a = input()
-while a:
-    s.append(a)
-    a = input()
-
-s = "\n".join(s)
-exec(s)
-
+exec(sys.stdin.read())
