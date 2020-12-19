@@ -1,0 +1,36 @@
+echo "20201105_"
+echo "1"
+python3 ~/url_checker.py ./20201105_1/task_1.py https://github.com/hakenlaken/pythonprac/tree/master/20201105_1/data
+echo "2"
+python3 ~/url_checker.py ./20201105_2/task_2.py https://github.com/hakenlaken/pythonprac/tree/master/20201105_2/data
+echo "3"
+python3 ~/url_checker.py ./20201105_3/task_3.py https://github.com/hakenlaken/pythonprac/tree/master/20201105_3/data
+echo "20201112_"
+echo "1"
+python3 ~/url_checker.py ./20201112_1/task_1.py https://github.com/hakenlaken/pythonprac/tree/master/20201112_1/data
+echo "2"
+python3 ~/url_checker.py ./20201112_2/task_2.py https://github.com/hakenlaken/pythonprac/tree/master/20201112_2/data
+echo "3"
+python3 ~/url_checker.py ./20201112_3/task_3.py https://github.com/hakenlaken/pythonprac/tree/master/20201112_3/data
+echo "20201112_"
+echo "1"
+python3 ~/url_checker.py ./20201112_1/task_1.py https://github.com/hakenlaken/pythonprac/tree/master/20201112_1/data
+echo "2"
+python3 ~/url_checker.py ./20201112_2/task_2.py https://github.com/hakenlaken/pythonprac/tree/master/20201112_2/data
+echo "3"
+python3 ~/url_checker.py ./20201112_3/task_3.py https://github.com/hakenlaken/pythonprac/tree/master/20201112_3/data
+echo "20201119_"
+echo "1"
+python3 ~/url_checker.py ./20201119_1/task_1.py https://github.com/hakenlaken/pythonprac/tree/master/20201119_1/data
+echo "2"
+python3 ~/url_checker.py ./20201119_2/task_2.py https://github.com/hakenlaken/pythonprac/tree/master/20201119_2/data
+echo "20201203_"
+echo "1"
+python3 ~/url_checker.py ./20201203_1/task_1.py https://github.com/hakenlaken/pythonprac/tree/master/20201203_1/data
+echo "2"
+python3 ~/url_checker.py ./20201203_2/task_2.py https://github.com/hakenlaken/pythonprac/tree/master/20201203_2/data
+echo "20201210_"
+echo "1"
+python3 ~/url_checker.py ./20201210_1/task_1.py https://github.com/hakenlaken/pythonprac/tree/master/20201210_1/data
+echo "2"
+python3 ~/url_checker.py ./20201210_2/task_2.py https://github.com/hakenlaken/pythonprac/tree/master/20201210_2/data
