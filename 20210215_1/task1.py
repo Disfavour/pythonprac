@@ -26,7 +26,6 @@ def do_login():
     string = bottle.request.forms.get('string')
     style = bottle.request.forms.get('style')
     colour = bottle.request.forms.get('colour')
-    print(colour)
     f = pyfiglet.Figlet(font=style)
     text = f.renderText(string)
     return bottle.template('<pre style="color:{{color}}">{{text}}</pre>', text=text, color=colour)
