@@ -9,10 +9,16 @@ class Application(tk.Frame):
 
     def createWidgets(self):
         self.quitButton = tk.Button(self, text='Quit', command=self.quit)
+        self.timeButton = tk.Button(self, text="Time")
+        self.timeLabel = tk.Label(self, text="time")
+
+
         self.quitButton.grid()
+        self.timeButton.grid()
+        self.timeLabel.grid()
+
 
 
 app = Application()
 app.master.title('Sample timer application')
 app.mainloop()
-
