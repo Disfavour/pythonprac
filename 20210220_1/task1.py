@@ -11,11 +11,11 @@ class Application(tk.Frame):
     def createWidgets(self):
         self.quitButton = tk.Button(self, text='Quit', command=self.quit)
         self.timeButton = tk.Button(self, text="Time", command=self.settime)
-        self.timeLabel = tk.Label(self, text="time")
+        self.timeLabel = tk.Label(self)
 
-        self.quitButton.grid()
         self.timeButton.grid()
-        self.timeLabel.grid()
+        self.quitButton.grid(row=0, column=1)
+        self.timeLabel.grid(columnspan=2)
 
     def settime(self):
         self.timeLabel["text"] = time.strftime("%c")
