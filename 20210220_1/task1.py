@@ -9,16 +9,18 @@ class Application(tk.Frame):
         self.createWidgets()
 
     def createWidgets(self):
+        self.time = tk.StringVar()
+
         self.quitButton = tk.Button(self, text='Quit', command=self.quit)
         self.timeButton = tk.Button(self, text="Time", command=self.settime)
-        self.timeLabel = tk.Label(self)
+        self.timeLabel = tk.Label(self, textvariable=self.time)
 
         self.timeButton.grid()
         self.quitButton.grid(row=0, column=1)
         self.timeLabel.grid(columnspan=2)
 
     def settime(self):
-        self.timeLabel["text"] = time.strftime("%c")
+        self.time.set(time.strftime("%c"))
 
 
 app = Application()
