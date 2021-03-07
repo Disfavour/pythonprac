@@ -24,7 +24,7 @@ class Application(tkinter.Frame):
 
     def quit_button_func(self):
         """Завершает выполнение программы"""
-        pass
+        self.quit()
 
     def next_item_handler(self):
         """Обработчик нажатия кнопки Next item"""
