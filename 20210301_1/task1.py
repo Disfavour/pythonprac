@@ -28,7 +28,7 @@ class Application(tkinter.Frame):
 
     def next_item_handler(self):
         """Обработчик нажатия кнопки Next item"""
-        pass
+        self.choice.set(self.option_list[(self.option_list.index(self.choice.get()) + 1) % len(self.option_list)])
 
 
 app = Application()
