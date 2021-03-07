@@ -9,7 +9,10 @@ class Application(tkinter.Frame):
 
     def createWidgets(self):
         self.quit_button = tkinter.Button(self, text='Quit', command=self.quit_button_func)
+        self.label_1 = tkinter.Label(self, text="<MenuItem>")
+
         self.quit_button.grid()
+        self.label_1.grid()
 
     def quit_button_func(self):
         """Завершает выполнение программы"""
