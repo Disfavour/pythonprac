@@ -13,7 +13,7 @@ class Application(tkinter.Frame):
         self.choice.set(self.option_list[0])
 
         self.quit_button = tkinter.Button(self, text='Quit', command=self.quit_button_func)
-        self.label_1 = tkinter.Label(self, text="<MenuItem>")
+        self.label_1 = tkinter.Label(self, textvariable=self.choice)
         self.next_item_button = tkinter.Button(self, text='Next item', command=self.next_item_handler)
         self.drop_down = tkinter.OptionMenu(self, self.choice, *self.option_list)
 
