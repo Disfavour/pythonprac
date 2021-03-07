@@ -9,7 +9,7 @@ class Application(tkinter.Frame):
 
     def createWidgets(self):
         self.choice = tkinter.StringVar()
-        self.option_list = ('One', 'Two', 'Three')
+        self.option_list = ('One', 'Two', 'Three', "Four")
         self.choice.set(self.option_list[0])
 
         self.quit_button = tkinter.Button(self, text='Quit', command=self.quit_button_func)
