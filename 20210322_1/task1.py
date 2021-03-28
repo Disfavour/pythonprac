@@ -53,16 +53,57 @@ class App(Application):
         self.text.tag_config("correct", foreground="green")
 
     def button_handler(self, event):
-        pass
+        self.strings = self.text.get("1.0", tk.END).split("\n")
+        for i, s in enumerate(self.strings):
+            words = s.split(" ")
+            if s.startswith("#") or words[0] in self.objects:
+                self.set_tag("incorrect", "correct", i)
+            else:
+                self.set_tag("correct", "incorrect", i)
+
+    def set_tag(self, tag_rem, tag_set, ind):
+        self.text.tag_remove(tag_rem, str(ind + 1) + ".0", str(ind + 1) + ".0 lineend")
+        self.text.tag_add(tag_set, str(ind + 1) + ".0", str(ind + 1) + ".0 lineend")
 
     def motion_handler(self, event):
-        pass
+        coords = self.text.index(tk.CURRENT).split('.')
+        curx, words = int(coords[0]), [""]
+        if self.strings[0] != '':
+            words = self.strings[curx-1].split(" ")
+        if words[0] in self.objects:
+            if words[0] == "oval" or words[0] == "rectangle":
+                self.help.set("Draw " + words[0] + ": " + words[0] + " x0 y0 x1 y1 outline='color' fill='color' width='width'")
+            elif words[0] == "line":
+                self.help.set("Draw line: line x0 y0 x1 y1 width='width' fill='color'")
+        elif words[0].startswith("#"):
+            self.help.set("Comment")
+        elif self.strings[0] != '' and self.strings[curx-1].isspace() is True or words[0] == '':
+            self.help.set("Empty string")
+        else:
+            self.help.set("Not CCL string")
+
+    def draw_objects(self):
+        self.strings = self.text.get("1.0", tk.END).split("\n")
+        for i, s in enumerate(self.strings):
+            words = s.split(" ")
+            if words[0] in self.objects:
+                try:
+                    eval(f"self.paint.create_{words[0]}({','.join(words[1:])})")
+                    self.set_tag("incorrect", "correct", i)
+                except:
+                    self.set_tag("correct", "incorrect", i)
+            elif s.startswith("#"):
+                self.set_tag("incorrect", "correct", i)
+            else:
+                self.set_tag("correct", "incorrect", i)
 
     def run_handler(self):
-        pass
+        self.clear_handler()
+        self.draw_objects()
 
     def clear_handler(self):
-        pass
+        for fid in self.paint.find_all():
+            self.paint.delete(fid)
 
 
 app = App(title="CCL interpreter")
