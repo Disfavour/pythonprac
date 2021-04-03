@@ -1,0 +1,29 @@
+From 47d81b66203ab51a00a17227e6285ca98c995a17 Mon Sep 17 00:00:00 2001
+From: Disfavour <disfavour228@gmail.com>
+Date: Sat, 3 Apr 2021 20:31:24 +0300
+Subject: [PATCH 1/3] =?UTF-8?q?=D0=9F=D1=80=D0=B0=D0=B2=D0=BA=D0=B0=20?=
+ =?UTF-8?q?=D1=81=D1=82=D1=80=D0=BE=D0=BA=D0=B8=20<3>?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ 20210329_1/opilki.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/20210329_1/opilki.txt b/20210329_1/opilki.txt
+index 85cfdc6..e4d64c1 100644
+--- a/20210329_1/opilki.txt
++++ b/20210329_1/opilki.txt
+@@ -1,7 +1,7 @@
+ Опять ничего не могу я понять.
+ Опилки мои – в беспорядке.
+ Везде и повсюду, опять и опять
+-Меня окружают загадки.
++МЕНЯ ОКРУЖАЮТ ЗАГАДКИ.
+ Возьмём это самое слово "опять".
+ Зачем мы его произносим,
+ Когда мы свободно могли бы сказать
+-- 
+2.25.1
+
