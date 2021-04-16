@@ -1,0 +1,4 @@
+Its from task1.py
+===================
+.. automodule:: task1
+   :members:

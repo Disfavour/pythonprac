@@ -4,10 +4,15 @@ import logic
 
 
 class Application(tk.Frame):
-    """Sample tkinter application class."""
+    """
+    Sample tkinter application class.
+
+    :param master: hz
+    :param title: название окошка
+    :param kwargs: hz
+    """
 
     def __init__(self, master=None, title="<application>", **kwargs):
-        """Create root window with frame, tune weight and resize."""
         self.logic = logic.Logic()
         super().__init__(master, **kwargs)
         self.master.title(title)
@@ -67,11 +72,19 @@ class App(Application):
         self.logic.logic_label(self.label_text, self.editor.get())
 
     def in_label(self, event):
-        """Print text in label."""
+        """
+        Print text in label.
+
+        :param event: бесполезный параметр
+        """
         self.logic.logic_label(self.label_text, "Hi Mouse")
 
     def out_label(self, event):
-        """Print text in label."""
+        """
+        Print text in label.
+
+        :param event: бесполезный параметр
+        """
         self.logic.logic_label(self.label_text, "Bye Mouse")
 
 
