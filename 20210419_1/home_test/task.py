@@ -1,9 +1,7 @@
 import tkinter as tk
 import gettext
-import locale
 
 
-locale.setlocale(locale.LC_ALL, locale.getdefaultlocale())
 gettext.install("messages", ".", names=("ngettext",))
 
 
