@@ -2,7 +2,7 @@ import tkinter as tk
 import gettext
 
 
-gettext.install("messages", ".", names=("ngettext",))
+gettext.install("zxc", ".", names=("ngettext",))
 
 
 class Application(tk.Frame):

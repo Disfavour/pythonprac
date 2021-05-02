@@ -2,11 +2,12 @@ import math
 
 
 def solveSquare(a, b, c):
-    # a!= 0
     D = b * b - 4 * a * c
     if D > 0:
-        return ((-b - math.sqrt(D)) / (2 * a), (-b + math.sqrt(D)) / (2 * a))
+        x1 = (-b - math.sqrt(D)) / (2 * a)
+        x2 = (-b + math.sqrt(D)) / (2 * a)
+        ans = min(x1, x2), max(x1, x2)
+        return ans
     elif D == 0:
-        return (-b / (2 * a), -b / (2 * a))
-    # else:
-    #     return Nonei
+        x = -b / (2 * a)
+        return x, x
