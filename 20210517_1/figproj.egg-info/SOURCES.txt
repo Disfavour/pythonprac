@@ -1,0 +1,9 @@
+pyproject.toml
+setup.cfg
+figproj/__init__.py
+figproj/__main__.py
+figproj.egg-info/PKG-INFO
+figproj.egg-info/SOURCES.txt
+figproj.egg-info/dependency_links.txt
+figproj.egg-info/requires.txt
+figproj.egg-info/top_level.txt
