@@ -1,24 +1,44 @@
-def task_png():
-    """Create png file."""
+import glob
+from doit.tools import create_folder
+
+def task_test():
+    """Preform tests."""
+    return {'actions': ['python3 -m unittest']}
+
+
+def task_pot():
+    """Re-create .pot ."""
     return {
-            "file_dep": ["pct.dia"],
-            "actions": ["dia pct.dia -e pct.png"],
-            "targets": ["pct.png"],
-    }
+            'actions': ['pybabel extract -o solve.pot solve'],
+            'file_dep': glob.glob('solve/*.py'),
+            'targets': ['solve.pot'],
+           }
 
 
-def task_icon():
-    """Create icon file."""
+def task_po():
+    """Update translations."""
     return {
-            "file_dep": ["pct.png"],
-            "actions": ["convert pct.png -resize 64 pct-icon.png"],
-            "targets": ["pct-icon.png"],
-    }
+            'actions': ['pybabel update -D solve -d po -i solve.pot'],
+            'file_dep': ['solve.pot'],
+            'targets': ['po/ru/LC_MESSAGES/solve.po'],
+           }
 
-def task_remove():
-    """Remove all junk."""
+
+def task_mo():
+    """Compile translations."""
     return {
-            "actions": ["rm -f *.png *~"],
-    }
+            'actions': [
+                (create_folder, ['solve/ru/LC_MESSAGES']),
+                'pybabel compile -D solve -l ru -i po/ru/LC_MESSAGES/solve.po -d solve'
+                       ],
+            'file_dep': ['po/ru/LC_MESSAGES/solve.po'],
+            'targets': ['solve/ru/LC_MESSAGES/solve.mo'],
+           }
 
 
+def task_wheel():
+    """Create binary wheel distribution."""
+    return {
+            'actions': ['python -m build -w'],
+            'task_dep': ['mo'],
+           }
